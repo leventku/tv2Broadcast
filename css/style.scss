@@ -1,0 +1,648 @@
+$color-1: white;
+$color-2: rgb(204,49,89);
+$color-3: rgb(66,66,66);
+$color-border: rgb(196,205,224);
+$bg-0: rgb(231,235,242);
+$bg-1: rgb(0,204,201);
+$bg-1-1: rgb(0,255,251);
+$bg-1-2: rgb(230,232,8);
+$bg-2: rgb(0,178,176);
+$bg-3: rgb(0,153,151);
+$bg-4: rgb(255,61,111);
+$bg-5: rgb(255,100,140);
+$bg-6: rgb(255,139,169);
+$bg-7: rgba(255,100,140,.5);
+$bg-pt-h2: rgb(244,245,151);
+
+a:link {color:$color-1;}      /* unvisited link */
+a:visited {color:$color-1;}  /* visited link */
+a:hover {color:$color-1;}  /* mouse over link */
+a:active {color:$color-1;}  /* selected link */
+
+
+html {
+	font-family: 'proxima-nova', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 0;
+}
+
+body{
+	background:$bg-0;
+}
+
+.wrap {
+	width:810px;
+	margin: 0 auto;
+
+	overflow: hidden;
+}
+
+header.main {
+	width: 810px;
+	height: 70px;
+	line-height: 70px;
+	position: relative;
+		background: rgb(66,66,66);
+
+	h1 {
+		* {
+			display: inline-block;
+		}
+
+		height: 70px;
+		margin: 0;
+		color: $color-1;
+		font-weight: normal;
+		text-transform: uppercase;
+		width: 300px;
+
+		a.tv2-logo {
+			text-transform: lowercase;
+			width: 70px;
+			height: 70px;
+			background: url('../img/tv2-logo.png') no-repeat center center;
+		}
+
+		span {
+			vertical-align: top;
+			font-size: 37px;
+			height: 70px;
+
+			&:before {
+				margin-right: 20px;
+				margin-top: 11.5px;
+				content: '';
+				width: 1px;
+				height: 47px;
+				background: $color-1;
+				display: inline-block;
+			}
+		}
+	}
+
+	div.share {
+		font-size: 0px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 70px;
+		width: 520px;
+		overflow: hidden;
+
+		&.activated {
+			h3 {
+				background-color: black;
+			}
+		}
+
+		h3, li {
+			font-size: 12px;
+		}
+
+		h3 {
+			background: rgb(120,120,120) url('../img/share.png') no-repeat center center;
+			width: 70px;
+			margin: 0;
+			position:absolute;
+			right: 0;
+			z-index: 1;
+			cursor: pointer;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			height: 70px;
+			float: right;
+			
+			li {
+				height: 70px;
+				display: block;
+				position: absolute;
+
+				a{
+					width: 70px;
+					height: 70px;
+					display: block;
+				}
+				&:nth-child(6) {
+					a{
+						background: rgb(120,120,120) url('../img/youtube.png') no-repeat center center;
+					}
+				}
+				&:nth-child(5) {
+					a{
+						background: rgb(120,120,120) url('../img/pinterest.png') no-repeat center center;
+					}
+				}
+				&:nth-child(4) {
+					a{
+						background: rgb(120,120,120) url('../img/instagram.png') no-repeat center center;
+					}
+				}
+				&:nth-child(3) {
+					a{
+						background: rgb(120,120,120) url('../img/gp.png') no-repeat center center;
+					}
+				}
+				&:nth-child(2) {
+					a{
+						background: rgb(120,120,120) url('../img/fb.png') no-repeat center center;
+					}
+				}
+				&:nth-child(1) {
+					a{
+						background: rgb(120,120,120) url('../img/twitter.png') no-repeat center center;
+					}
+				}
+				&:nth-child(2n) {
+					a {
+						background-color: rgb(74,74,74);
+					}
+				}
+			}
+		}
+	}
+} // header
+
+main {
+	width: 810px;
+	position: relative;
+
+	section {
+		display: none;
+
+		&.selected {
+			display: block;
+		}
+	}
+
+	#all-day {
+		position: relative;
+		color: $color-1;
+
+		nav {
+			position: relative;
+			height: 265px;
+			width: 200px;
+			float: left;
+			vertical-align: top;
+			background: $bg-1;
+
+			h2{
+				position:relative;
+				width: 200px;
+				top: 60px;
+				text-align: center;
+
+				span {
+					width: 120px;
+					display: block;
+					margin: 0 auto;
+				}
+
+				.day-nr {
+					font-size: 110px;
+					line-height: 100px;
+					padding-top: 20px;
+					height: 100px;
+				}
+				.month-name{
+					font-size: 24px;
+					line-height: 40px;
+					padding-bottom: 30px;
+				}
+			}
+
+			.week {
+				position: absolute;
+				width: 200px;
+				height: 35px;
+				background: $bg-2;
+				top: 0px;
+
+				li {
+					display: inline-block;
+
+					a {
+						display: block;
+						width: 28.5px;
+						text-align: center;
+						line-height: 35px;
+						font-size: 13px;
+						text-decoration: none;
+
+						&:hover{
+							background: $bg-3;
+						}
+					}
+
+					&.selected {
+						a {
+							background: $bg-1;
+							line-height: 35px;
+						}
+					}
+				}
+			}
+
+			.hours-wrap{
+				position: absolute;
+				background: $bg-2;
+				top: 0px;
+				left: 200px;
+				width: 610px;
+				overflow: hidden;
+				height: 35px;
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 30px;
+					height: 35px;
+					background: url('../img/hours-overlay.png');
+					top: 0;
+				}
+
+				.hours {
+					font-size: 18px;
+					list-style: none;
+					z-index: 1;
+					height: 35px;
+					// width: 10000px;
+
+					li {
+						float: left;
+						padding: 0;
+
+						&.selected {
+							a {
+								background: $bg-4;
+								position:relative;
+
+								&:hover {
+									background: $bg-4;
+								}
+							}
+						}
+
+						a {
+							display: block;
+							width: 80px;
+							height: 35px;
+							line-height: 35px;
+							text-align: center;
+
+							&:hover {
+								background: $bg-5;
+							}
+						}
+					}
+				}/* .hours */
+			}
+		}
+
+		article {
+			width: 610px;
+			float: right;
+			background-color: $bg-0;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			padding-top: 280px;
+			margin-top: 35px;
+
+			.indented {
+				padding: 0 20px;
+			}
+
+			header {
+				color: $color-2;
+				background-color: $bg-0;
+
+				.top-row {
+					font-size: 26px;
+					line-height: 26px;
+					padding-bottom: 5px;
+				}
+
+				.bottom-row {
+					padding-bottom: 20px;
+
+				}
+
+				.headings {
+					width: 430px;
+
+					h1{
+					}
+
+					h2 {
+						font-weight: 300;
+						font-size: 22px;
+						line-height: 29px;
+						text-transform: lowercase;
+					}
+				}
+
+				.when {
+					vertical-align: top;
+					text-align: right;
+					float: right;
+					padding-right: 20px;
+					width: 115px;
+
+					span.day {
+						display: block;
+					}
+					span.time {
+						font-size: 32px;
+						line-height: 36px;
+					}
+				}
+
+				.headings, .when {
+					display: inline-block;
+					padding-top: 25px;
+				}
+
+			}
+
+			menu {
+				height: 60px;
+				background: $bg-5;
+
+				ul {
+					li {
+							font-size: 15px;
+							list-style: none;
+
+							a{
+								display: block;
+								width: 152.5px;
+								height: 60px;
+							}
+
+						&.ribbon{
+							// display: inline-block;
+							float: left;
+
+							a {
+								background-repeat: no-repeat;
+								background-position: center center;
+
+								&[data-role="fb"] {
+									background-image: url('../img/fb-small.png');
+								}
+								&[data-role="tw"] {
+									background-image: url('../img/twitter-small.png');
+								}
+								&[data-role="gp"] {
+									background-image: url('../img/google-small.png');
+								}
+								&[data-role="rm"] {
+									background-image: url('../img/clock-small.png');
+								
+									&.cancel-rm {
+										background-image: url('../img/clock-small-cancel.png');
+									}
+									&.expired {
+										background-color: #787878;
+										cursor: default;
+									}
+								}
+							}
+
+							&:nth-child(2n) {
+								a {
+									background-color: $bg-6;
+								}
+							}
+						}
+
+						&:last-child {
+							position: absolute;
+							top: 255px;
+							right: 0;
+
+							a[data-role='imdb'] {
+								background: $bg-7 url('../img/imdb.png') center center no-repeat;
+							}
+						}
+					}
+				}
+			}
+
+			div.detailed-info {
+				font-size: 18px;
+				font-weight: 300;
+				color: $color-3;
+				overflow-y: auto;
+				height: 220px;
+			}
+		}
+	} //all-day
+
+	#prime-time {
+		float: right;
+
+		h2 {
+			font-size: 24px;
+			line-height: 50px;
+			height: 50px;
+			width: 610px;
+			margin-left: 200px;
+			text-align: center;
+			background: $bg-pt-h2;
+			color: $color-3;
+		}
+
+		ul.programs {
+			li {
+				position: relative;
+
+				a { //program link
+					color: $color-2;
+					display: inline-block;
+					background-repeat: no-repeat;
+					background-position: 0 0;
+					background-color: white;
+					width: 810px;
+					height: 100px;
+					line-height: 100px;
+
+					header {
+						width: 360px;
+						position: absolute;
+						bottom: 25px;
+						left: 220px;
+						z-index: 1;
+						
+						h3 {
+							font-size: 24px;
+							line-height: 24px;
+						}
+
+						h4 {
+							font-size: 18px;
+							line-height: 22px;
+							font-weight: 300;
+							text-transform: lowercase;
+						}
+					}
+
+					span.time {
+						font-size: 32px;
+						line-height: 36px;
+						vertical-align: bottom;
+						text-align: right;
+						width: 90px;
+						position: absolute;
+						bottom: 35px;
+						right: 120px;
+						z-index: 1;
+					}
+
+					&.selected {
+						color: $color-1;
+
+						&:after {
+							content: '';
+							display: block;
+							position:absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							background: rgba(56,74,93,.5);
+						}
+
+						& + menu {
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: 100px;
+							display: block;
+
+							ul{
+								li{
+									a {
+										margin: 0 25px;
+										width: 50px;
+										height: 30px;
+
+										&[data-role='imdb'] {
+											background: url('../img/imdb-pt.png') center center no-repeat;
+										}
+										&[data-role='fb'] {
+											background: url('../img/fb-pt.png') center center no-repeat;
+										}
+										&[data-role='tw'] {
+											background: url('../img/twitter-pt.png') center center no-repeat;
+										}
+										&[data-role='gp'] {
+											background: url('../img/gp-pt.png') center center no-repeat;
+										}
+									}
+								}
+							}
+						}
+					}
+				} // end of main a
+				&:nth-child(n) a[data-role="rm"] {
+					background-color: $bg-6;
+					background-image: url('../img/clock.png');
+					background-position: center center;
+					background-repeat: no-repeat;
+					width: 100px;
+					height: 100px;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+
+					&.cancel-rm {
+						background-image: url('../img/clock-cancel.png');
+					}
+
+					&.expired {
+						background-color: #787878;
+						cursor: default;
+						border-bottom: 1px solid rgb(133, 133, 133);
+						height: 99px;
+					}
+
+				}
+
+				&:nth-child(2n) {
+					a[data-role="rm"] {
+						background-color: $bg-5; 
+					}
+				}
+
+				menu {
+					display: none;
+				}
+			}// end of li
+		} //ul.programs
+	}
+} //main
+
+nav.modes {
+	position: relative;
+	float:left;
+	clear: left;
+
+	a{
+		position: absolute;
+		top: 50px;
+		text-align: center;
+		width: 200px;
+		color: $color-3;
+		font-weight: 300;
+		
+		span {
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+
+		&.show {
+			font-size: 24px;
+			line-height: 50px;
+			display: block;
+			height: 50px;
+
+			&:hover span:after{
+				content: '';
+				background: url('../img/mode-arrow.png') 0 0 no-repeat;
+				display: inline-block;
+				width: 15px;
+				height: 9px;
+				margin: 0px 0 3px 6px;
+			}
+
+		}
+
+		&.ad {
+			background: $bg-1-1;
+		}
+
+		&.pt {
+			background: $bg-1-2;
+		}
+		
+		&.selected {
+			top: 0;
+
+			span:after {
+				content: '';
+				background: url('../img/mode-arrow.png') 0 0 no-repeat;
+				display: inline-block;
+				width: 15px;
+				height: 9px;
+				margin: 0px 0 3px 6px;
+			}
+		}
+	}
+}

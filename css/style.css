@@ -1,0 +1,632 @@
+/* line 17, style.scss */
+a:link {
+  color: white;
+}
+
+/* unvisited link */
+/* line 18, style.scss */
+a:visited {
+  color: white;
+}
+
+/* visited link */
+/* line 19, style.scss */
+a:hover {
+  color: white;
+}
+
+/* mouse over link */
+/* line 20, style.scss */
+a:active {
+  color: white;
+}
+
+/* selected link */
+/* line 23, style.scss */
+html {
+  font-family: 'proxima-nova', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0;
+}
+
+/* line 29, style.scss */
+body {
+  background: #e7ebf2;
+}
+
+/* line 33, style.scss */
+.wrap {
+  width: 810px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* line 40, style.scss */
+header.main {
+  width: 810px;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  background: #424242;
+}
+/* line 47, style.scss */
+header.main h1 {
+  height: 70px;
+  margin: 0;
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  width: 300px;
+}
+/* line 48, style.scss */
+header.main h1 * {
+  display: inline-block;
+}
+/* line 59, style.scss */
+header.main h1 a.tv2-logo {
+  text-transform: lowercase;
+  width: 70px;
+  height: 70px;
+  background: url("../img/tv2-logo.png") no-repeat center center;
+}
+/* line 66, style.scss */
+header.main h1 span {
+  vertical-align: top;
+  font-size: 37px;
+  height: 70px;
+}
+/* line 71, style.scss */
+header.main h1 span:before {
+  margin-right: 20px;
+  margin-top: 11.5px;
+  content: '';
+  width: 1px;
+  height: 47px;
+  background: white;
+  display: inline-block;
+}
+/* line 83, style.scss */
+header.main div.share {
+  font-size: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70px;
+  width: 520px;
+  overflow: hidden;
+}
+/* line 93, style.scss */
+header.main div.share.activated h3 {
+  background-color: black;
+}
+/* line 98, style.scss */
+header.main div.share h3, header.main div.share li {
+  font-size: 12px;
+}
+/* line 102, style.scss */
+header.main div.share h3 {
+  background: #787878 url("../img/share.png") no-repeat center center;
+  width: 70px;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+/* line 112, style.scss */
+header.main div.share ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 70px;
+  float: right;
+}
+/* line 119, style.scss */
+header.main div.share ul li {
+  height: 70px;
+  display: block;
+  position: absolute;
+}
+/* line 124, style.scss */
+header.main div.share ul li a {
+  width: 70px;
+  height: 70px;
+  display: block;
+}
+/* line 130, style.scss */
+header.main div.share ul li:nth-child(6) a {
+  background: #787878 url("../img/youtube.png") no-repeat center center;
+}
+/* line 135, style.scss */
+header.main div.share ul li:nth-child(5) a {
+  background: #787878 url("../img/pinterest.png") no-repeat center center;
+}
+/* line 140, style.scss */
+header.main div.share ul li:nth-child(4) a {
+  background: #787878 url("../img/instagram.png") no-repeat center center;
+}
+/* line 145, style.scss */
+header.main div.share ul li:nth-child(3) a {
+  background: #787878 url("../img/gp.png") no-repeat center center;
+}
+/* line 150, style.scss */
+header.main div.share ul li:nth-child(2) a {
+  background: #787878 url("../img/fb.png") no-repeat center center;
+}
+/* line 155, style.scss */
+header.main div.share ul li:nth-child(1) a {
+  background: #787878 url("../img/twitter.png") no-repeat center center;
+}
+/* line 160, style.scss */
+header.main div.share ul li:nth-child(2n) a {
+  background-color: #4a4a4a;
+}
+
+/* line 169, style.scss */
+main {
+  width: 810px;
+  position: relative;
+}
+/* line 173, style.scss */
+main section {
+  display: none;
+}
+/* line 176, style.scss */
+main section.selected {
+  display: block;
+}
+/* line 181, style.scss */
+main #all-day {
+  position: relative;
+  color: white;
+}
+/* line 185, style.scss */
+main #all-day nav {
+  position: relative;
+  height: 265px;
+  width: 200px;
+  float: left;
+  vertical-align: top;
+  background: #00ccc9;
+}
+/* line 193, style.scss */
+main #all-day nav h2 {
+  position: relative;
+  width: 200px;
+  top: 60px;
+  text-align: center;
+}
+/* line 199, style.scss */
+main #all-day nav h2 span {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+/* line 205, style.scss */
+main #all-day nav h2 .day-nr {
+  font-size: 110px;
+  line-height: 100px;
+  padding-top: 20px;
+  height: 100px;
+}
+/* line 211, style.scss */
+main #all-day nav h2 .month-name {
+  font-size: 24px;
+  line-height: 40px;
+  padding-bottom: 30px;
+}
+/* line 218, style.scss */
+main #all-day nav .week {
+  position: absolute;
+  width: 200px;
+  height: 35px;
+  background: #00b2b0;
+  top: 0px;
+}
+/* line 225, style.scss */
+main #all-day nav .week li {
+  display: inline-block;
+}
+/* line 228, style.scss */
+main #all-day nav .week li a {
+  display: block;
+  width: 28.5px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 13px;
+  text-decoration: none;
+}
+/* line 236, style.scss */
+main #all-day nav .week li a:hover {
+  background: #009997;
+}
+/* line 242, style.scss */
+main #all-day nav .week li.selected a {
+  background: #00ccc9;
+  line-height: 35px;
+}
+/* line 250, style.scss */
+main #all-day nav .hours-wrap {
+  position: absolute;
+  background: #00b2b0;
+  top: 0px;
+  left: 200px;
+  width: 610px;
+  overflow: hidden;
+  height: 35px;
+  /* .hours */
+}
+/* line 259, style.scss */
+main #all-day nav .hours-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 35px;
+  background: url("../img/hours-overlay.png");
+  top: 0;
+}
+/* line 269, style.scss */
+main #all-day nav .hours-wrap .hours {
+  font-size: 18px;
+  list-style: none;
+  z-index: 1;
+  height: 35px;
+}
+/* line 276, style.scss */
+main #all-day nav .hours-wrap .hours li {
+  float: left;
+  padding: 0;
+}
+/* line 281, style.scss */
+main #all-day nav .hours-wrap .hours li.selected a {
+  background: #ff3d6f;
+  position: relative;
+}
+/* line 285, style.scss */
+main #all-day nav .hours-wrap .hours li.selected a:hover {
+  background: #ff3d6f;
+}
+/* line 291, style.scss */
+main #all-day nav .hours-wrap .hours li a {
+  display: block;
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+/* line 298, style.scss */
+main #all-day nav .hours-wrap .hours li a:hover {
+  background: #ff648c;
+}
+/* line 307, style.scss */
+main #all-day article {
+  width: 610px;
+  float: right;
+  background-color: #e7ebf2;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  padding-top: 280px;
+  margin-top: 35px;
+}
+/* line 316, style.scss */
+main #all-day article .indented {
+  padding: 0 20px;
+}
+/* line 320, style.scss */
+main #all-day article header {
+  color: #cc3159;
+  background-color: #e7ebf2;
+}
+/* line 324, style.scss */
+main #all-day article header .top-row {
+  font-size: 26px;
+  line-height: 26px;
+  padding-bottom: 5px;
+}
+/* line 330, style.scss */
+main #all-day article header .bottom-row {
+  padding-bottom: 20px;
+}
+/* line 335, style.scss */
+main #all-day article header .headings {
+  width: 430px;
+}
+/* line 341, style.scss */
+main #all-day article header .headings h2 {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 29px;
+  text-transform: lowercase;
+}
+/* line 349, style.scss */
+main #all-day article header .when {
+  vertical-align: top;
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+  width: 115px;
+}
+/* line 356, style.scss */
+main #all-day article header .when span.day {
+  display: block;
+}
+/* line 359, style.scss */
+main #all-day article header .when span.time {
+  font-size: 32px;
+  line-height: 36px;
+}
+/* line 365, style.scss */
+main #all-day article header .headings, main #all-day article header .when {
+  display: inline-block;
+  padding-top: 25px;
+}
+/* line 372, style.scss */
+main #all-day article menu {
+  height: 60px;
+  background: #ff648c;
+}
+/* line 377, style.scss */
+main #all-day article menu ul li {
+  font-size: 15px;
+  list-style: none;
+}
+/* line 381, style.scss */
+main #all-day article menu ul li a {
+  display: block;
+  width: 152.5px;
+  height: 60px;
+}
+/* line 387, style.scss */
+main #all-day article menu ul li.ribbon {
+  float: left;
+}
+/* line 391, style.scss */
+main #all-day article menu ul li.ribbon a {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* line 395, style.scss */
+main #all-day article menu ul li.ribbon a[data-role="fb"] {
+  background-image: url("../img/fb-small.png");
+}
+/* line 398, style.scss */
+main #all-day article menu ul li.ribbon a[data-role="tw"] {
+  background-image: url("../img/twitter-small.png");
+}
+/* line 401, style.scss */
+main #all-day article menu ul li.ribbon a[data-role="gp"] {
+  background-image: url("../img/google-small.png");
+}
+/* line 404, style.scss */
+main #all-day article menu ul li.ribbon a[data-role="rm"] {
+  background-image: url("../img/clock-small.png");
+}
+/* line 407, style.scss */
+main #all-day article menu ul li.ribbon a[data-role="rm"].cancel-rm {
+  background-image: url("../img/clock-small-cancel.png");
+}
+/* line 410, style.scss */
+main #all-day article menu ul li.ribbon a[data-role="rm"].expired {
+  background-color: #787878;
+  cursor: default;
+}
+/* line 418, style.scss */
+main #all-day article menu ul li.ribbon:nth-child(2n) a {
+  background-color: #ff8ba9;
+}
+/* line 424, style.scss */
+main #all-day article menu ul li:last-child {
+  position: absolute;
+  top: 255px;
+  right: 0;
+}
+/* line 429, style.scss */
+main #all-day article menu ul li:last-child a[data-role='imdb'] {
+  background: rgba(255, 100, 140, 0.5) url("../img/imdb.png") center center no-repeat;
+}
+/* line 437, style.scss */
+main #all-day article div.detailed-info {
+  font-size: 18px;
+  font-weight: 300;
+  color: #424242;
+  overflow-y: auto;
+  height: 220px;
+}
+/* line 447, style.scss */
+main #prime-time {
+  float: right;
+}
+/* line 450, style.scss */
+main #prime-time h2 {
+  font-size: 24px;
+  line-height: 50px;
+  height: 50px;
+  width: 610px;
+  margin-left: 200px;
+  text-align: center;
+  background: #f4f597;
+  color: #424242;
+}
+/* line 462, style.scss */
+main #prime-time ul.programs li {
+  position: relative;
+}
+/* line 465, style.scss */
+main #prime-time ul.programs li a {
+  color: #cc3159;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: white;
+  width: 810px;
+  height: 100px;
+  line-height: 100px;
+}
+/* line 475, style.scss */
+main #prime-time ul.programs li a header {
+  width: 360px;
+  position: absolute;
+  bottom: 25px;
+  left: 220px;
+  z-index: 1;
+}
+/* line 482, style.scss */
+main #prime-time ul.programs li a header h3 {
+  font-size: 24px;
+  line-height: 24px;
+}
+/* line 487, style.scss */
+main #prime-time ul.programs li a header h4 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+/* line 495, style.scss */
+main #prime-time ul.programs li a span.time {
+  font-size: 32px;
+  line-height: 36px;
+  vertical-align: bottom;
+  text-align: right;
+  width: 90px;
+  position: absolute;
+  bottom: 35px;
+  right: 120px;
+  z-index: 1;
+}
+/* line 507, style.scss */
+main #prime-time ul.programs li a.selected {
+  color: white;
+}
+/* line 510, style.scss */
+main #prime-time ul.programs li a.selected:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(56, 74, 93, 0.5);
+}
+/* line 521, style.scss */
+main #prime-time ul.programs li a.selected + menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  display: block;
+}
+/* line 530, style.scss */
+main #prime-time ul.programs li a.selected + menu ul li a {
+  margin: 0 25px;
+  width: 50px;
+  height: 30px;
+}
+/* line 535, style.scss */
+main #prime-time ul.programs li a.selected + menu ul li a[data-role='imdb'] {
+  background: url("../img/imdb-pt.png") center center no-repeat;
+}
+/* line 538, style.scss */
+main #prime-time ul.programs li a.selected + menu ul li a[data-role='fb'] {
+  background: url("../img/fb-pt.png") center center no-repeat;
+}
+/* line 541, style.scss */
+main #prime-time ul.programs li a.selected + menu ul li a[data-role='tw'] {
+  background: url("../img/twitter-pt.png") center center no-repeat;
+}
+/* line 544, style.scss */
+main #prime-time ul.programs li a.selected + menu ul li a[data-role='gp'] {
+  background: url("../img/gp-pt.png") center center no-repeat;
+}
+/* line 553, style.scss */
+main #prime-time ul.programs li:nth-child(n) a[data-role="rm"] {
+  background-color: #ff8ba9;
+  background-image: url("../img/clock.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* line 564, style.scss */
+main #prime-time ul.programs li:nth-child(n) a[data-role="rm"].cancel-rm {
+  background-image: url("../img/clock-cancel.png");
+}
+/* line 568, style.scss */
+main #prime-time ul.programs li:nth-child(n) a[data-role="rm"].expired {
+  background-color: #787878;
+  cursor: default;
+  border-bottom: 1px solid #858585;
+  height: 99px;
+}
+/* line 578, style.scss */
+main #prime-time ul.programs li:nth-child(2n) a[data-role="rm"] {
+  background-color: #ff648c;
+}
+/* line 583, style.scss */
+main #prime-time ul.programs li menu {
+  display: none;
+}
+
+/* line 591, style.scss */
+nav.modes {
+  position: relative;
+  float: left;
+  clear: left;
+}
+/* line 596, style.scss */
+nav.modes a {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  width: 200px;
+  color: #424242;
+  font-weight: 300;
+}
+/* line 604, style.scss */
+nav.modes a span {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+/* line 610, style.scss */
+nav.modes a.show {
+  font-size: 24px;
+  line-height: 50px;
+  display: block;
+  height: 50px;
+}
+/* line 616, style.scss */
+nav.modes a.show:hover span:after {
+  content: '';
+  background: url("../img/mode-arrow.png") 0 0 no-repeat;
+  display: inline-block;
+  width: 15px;
+  height: 9px;
+  margin: 0px 0 3px 6px;
+}
+/* line 627, style.scss */
+nav.modes a.ad {
+  background: #00fffb;
+}
+/* line 631, style.scss */
+nav.modes a.pt {
+  background: #e6e808;
+}
+/* line 635, style.scss */
+nav.modes a.selected {
+  top: 0;
+}
+/* line 638, style.scss */
+nav.modes a.selected span:after {
+  content: '';
+  background: url("../img/mode-arrow.png") 0 0 no-repeat;
+  display: inline-block;
+  width: 15px;
+  height: 9px;
+  margin: 0px 0 3px 6px;
+}
